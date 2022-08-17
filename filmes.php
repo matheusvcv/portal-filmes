@@ -21,10 +21,20 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 			$obj_single = json_decode($json_single);
 
-		}
-	}
+				if(isset($obj_single)) { foreach($obj_single->results as $resultado): ?>
 
-?>
+					<p>
+						<img src="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>"><br>
+					
+					
+						<?php echo $resultado->title; ?><br>
+					
+					
+						<?php echo $resultado->popularity; ?><br>
+					</p><br>
+
+				<?php endforeach; } } } ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,17 +53,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		</p>
 	</form>
 
-	<?php  
-
-		if(isset($obj_single)) { 
-
-			foreach($obj_single->results as $resultado){ 
-
-			echo $resultado->title . "<br>";
-			} 
-		} 
-
-	?>
 
 </body>
 </html>
