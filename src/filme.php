@@ -12,7 +12,6 @@ require "conexao.php";
 		}
 
 
-
 		public function insereFilmesFav(string $imagem, string $titulo, string $popularidade): void
 		{
 			$inserir = $this->conexao->prepare("INSERT INTO favoritos(imagem, titulo, popularidade) VALUES(?,?,?)");
@@ -20,6 +19,13 @@ require "conexao.php";
 			$inserir->bind_param('sss', $imagem, $titulo, $popularidade);
 
 			$inserir->execute();
+		}
+
+		public function exibeFilmesFav(): array
+		{
+			$exibeFav = $this->conexao->query("SELECT * FROM favoritos");
+
+			
 		}
 
 

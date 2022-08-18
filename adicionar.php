@@ -17,7 +17,7 @@ require "src/filme.php";
     $insereFav = New Filme($conexao);
     $insere = $insereFav->insereFilmesFav($imagem, $titulo, $popularidade);
 
-    header('Location: adicionado.php');
+    header('Location: favoritos.php');
 
 
 ?>
