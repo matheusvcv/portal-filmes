@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" width="device-width initial-scale=1.0">
+	<title>Movies</title>
+</head>
+<body>
+	<h1>Procurar Filmes</h1>
+	<form action="" method="POST">
+		<p>
+			<strong>Nome do filme:</strong> <input type="text" name="titulo">
+			<input type="submit" value="Procurar">
+		</p>
+	</form>
+
 <?php
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -24,36 +40,27 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 				if(isset($obj_single)) { foreach($obj_single->results as $resultado): ?>
 
 					<p>
+
+					<form method="POST" action="adicionar.php">
+
 						<img src="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>"><br>
-					
+
+						<input type="hidden" name="imagem" value="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>">
 					
 						<?php echo $resultado->title; ?><br>
-					
+
+						<input type="hidden" name="titulo" value="<?php echo $resultado->title; ?>">
 					
 						<?php echo $resultado->popularity; ?><br>
+
+						<input type="hidden" name="popularidade" value="<?php echo $resultado->popularity; ?>">
+
+						<input type="submit" value="Adicionar Favoritos">
+
 					</p><br>
 
+					</form>
+
 				<?php endforeach; } } } ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" width="device-width initial-scale=1.0">
-	<title>Movies</title>
-</head>
-<body>
-	<h1>Procurar Filmes</h1>
-	<form action="" method="POST">
-		<p>
-			<strong>Nome do filme:</strong> <input type="text" name="titulo">
-		</p>
-		<p>
-			<input type="submit" value="Procurar">
-		</p>
-	</form>
-
-
 </body>
 </html>
-
