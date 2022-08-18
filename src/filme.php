@@ -1,6 +1,6 @@
 <?php
 
-require($conexao);
+require "conexao.php";
 
 	class Filme
 	{
@@ -11,12 +11,17 @@ require($conexao);
 			$this->conexao = $conexao;
 		}
 
-		public function insereFilmesFav(string $imagem, string $titulo, string $popularidade)
+
+
+		public function insereFilmesFav(string $imagem, string $titulo, string $popularidade): void
 		{
-			$inserir = $this->conexao->prepare("INSERT INTO favoritos VALUES('?,?,?')");
+			$inserir = $this->conexao->prepare("INSERT INTO favoritos(imagem, titulo, popularidade) VALUES(?,?,?)");
 
 			$inserir->bind_param('sss', $imagem, $titulo, $popularidade);
 
 			$inserir->execute();
 		}
+
+
+
 	}

@@ -1,6 +1,7 @@
 <?php
  
 require "src/conexao.php";
+require "src/filme.php";
 
  $imagem = $_POST['imagem'];
  $titulo = $_POST['titulo'];
@@ -12,6 +13,11 @@ require "src/conexao.php";
  echo $popularidade . '<br>';
 
 
+
+    $insereFav = New Filme($conexao);
+    $insere = $insereFav->insereFilmesFav($imagem, $titulo, $popularidade);
+
+    header('Location: adicionado.php');
 
 
 ?>
