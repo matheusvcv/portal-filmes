@@ -1,3 +1,8 @@
+<?php
+
+require 'protect.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,9 +17,10 @@
 	</p>
 
     <p>
-    	<a href='filmes.php'>Voltar</a>
+    	<a href="lista-fav.php">Voltar</a><br>
+        <br><a href="inicio.php"></a>
+
     </p>
 
 </body>
 </html>
-

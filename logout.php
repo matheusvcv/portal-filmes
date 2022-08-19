@@ -2,7 +2,7 @@
 
 	if(!isset($_SESSION)) {
 
-		session_star();
+		session_start();
 	}
 
 	session_destroy();

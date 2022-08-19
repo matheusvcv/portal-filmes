@@ -12,6 +12,11 @@ require 'protect.php';
 <body>
 	<a href="index.php">Sair</a>
 	<h1>Bem vindo ao Movies</h1>
-	<a href="filmes.php"><p>Procurar Filmes</p></a>
+	<p>
+		<a href="filmes.php">Procurar Filmes</a>
+	</p>
+	<p>
+		<a href="lista-fav.php">Minha Lista de Favoritos</a>
+	</p>
 </body>
 </html>

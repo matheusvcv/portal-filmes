@@ -12,20 +12,22 @@ require "conexao.php";
 		}
 
 
-		public function insereFilmesFav(string $imagem, string $titulo, string $popularidade): void
+		public function insereFilmesFav(int $id_usuario, string $imagem, string $titulo, string $popularidade): void
 		{
-			$inserir = $this->conexao->prepare("INSERT INTO favoritos(imagem, titulo, popularidade) VALUES(?,?,?)");
+			$inserir = $this->conexao->prepare("INSERT INTO favoritos(id_usuario, imagem, titulo, popularidade) VALUES(?,?,?,?)");
 
-			$inserir->bind_param('sss', $imagem, $titulo, $popularidade);
+			$inserir->bind_param('isss', $id_usuario, $imagem, $titulo, $popularidade);
 
 			$inserir->execute();
 		}
 
-		public function exibeFilmesFav(): array
+		public function exibeFilmesFav(int $id_usuario): array
 		{
-			$exibeFav = $this->conexao->query("SELECT * FROM favoritos");
+			$exibeFav = $this->conexao->query("SELECT * FROM favoritos WHERE id_usuario = $id_usuario");
 
-			
+			$favoritos = $exibeFav->fetch_all(MYSQLI_ASSOC);
+
+			return $favoritos;	
 		}
 
 

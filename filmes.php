@@ -1,3 +1,8 @@
+<?php
+
+require "protect.php";
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +12,7 @@
 	<title>Movies</title>
 </head>
 <body>
+	<a href="index.php">Sair</a>
 	<div id="container">
 		<h1>Procurar Filmes</h1>
 		<form action="" method="POST">

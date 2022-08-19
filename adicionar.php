@@ -2,6 +2,7 @@
  
 require "src/conexao.php";
 require "src/filme.php";
+require 'protect.php';
 
  $imagem = $_POST['imagem'];
  $titulo = $_POST['titulo'];
@@ -15,7 +16,7 @@ require "src/filme.php";
 
 
     $insereFav = New Filme($conexao);
-    $insere = $insereFav->insereFilmesFav($imagem, $titulo, $popularidade);
+    $insere = $insereFav->insereFilmesFav($_SESSION['id'], $imagem, $titulo, $popularidade);
 
     header('Location: favoritos.php');
 
