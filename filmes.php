@@ -63,7 +63,7 @@ require "protect.php";
 
 							<input type="hidden" name="popularidade" value="<?php echo $resultado->popularity; ?>">
 
-							<input type="submit" value="Adicionar Favoritos">
+							<p><input type="submit" value="Adicionar Favoritos"></p>
 
 						</p><br>
 

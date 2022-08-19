@@ -30,6 +30,24 @@ require "conexao.php";
 			return $favoritos;	
 		}
 
+		public function exibeFilmeInd(int $id): array
+		{
+			$exibe = $this->conexao->query("SELECT * FROM favoritos WHERE id = $id");
+
+			$filme = $exibe-> fetch_all(MYSQLI_ASSOC);
+
+			return $filme;	
+		}
+
+		public function deletaFilmesFav(int $id, int $id_usuario): void
+		{
+			$deletaFav = $this->conexao->prepare("DELETE FROM favoritos WHERE id = ? AND id_usuario = ?");
+
+			$deletaFav-> bind_param('ii', $id, $id_usuario);
+
+			$deletaFav->execute();
+		}
+
 
 
 	}

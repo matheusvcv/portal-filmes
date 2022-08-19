@@ -31,6 +31,7 @@ $favoritos = $exibeFav->exibeFilmesFav($_SESSION['id']);
 			<img src="<?php echo $favorito['imagem']; ?>">
 			<p><?php echo $favorito['titulo']; ?></p>
 			<p><?php echo $favorito['popularidade']; ?></p>
+			<p><a href="deletar.php?id=<?php echo $favorito['id']; ?>"><button>Remover</button></a><p>
 		</p>
 			<?php endforeach; ?>
 		<br><a href="inicio.php"><button>Voltar</button></a>
