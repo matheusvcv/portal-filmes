@@ -49,7 +49,7 @@ require "protect.php";
 
 						<p>
 
-						<form method="POST" action="adicionar.php">
+						<form method="POST" action="listas.php">
 
 							<img src="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>"><br>
 
@@ -63,11 +63,13 @@ require "protect.php";
 
 							<input type="hidden" name="popularidade" value="<?php echo $resultado->popularity; ?>">
 
-							<p><input type="submit" value="Adicionar Favoritos"></p>
+							<?php echo $resultado->id; ?><br>
 
-						</p><br>
+							<input type="hidden" name="id" value="<?php echo $resultado->id; ?>">
 
-						</form>
+							</p>
+								<input type="submit" value="Adicionar em Alguma Lista">
+						</form>						
 
 					<?php endforeach; } } } ?>
 		</div>

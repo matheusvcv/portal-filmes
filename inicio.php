@@ -18,5 +18,11 @@ require 'protect.php';
 	<p>
 		<a href="lista-fav.php">Minha Lista de Favoritos</a>
 	</p>
+	<p>
+		<a href="">Lista de Desejos</a>
+	</p>
+	<p>
+		<a href="lista-piores.php">Piores Filmes</a>
+	</p>
 </body>
 </html>

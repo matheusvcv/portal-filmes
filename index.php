@@ -38,7 +38,7 @@ if(isset($_POST['user']) || isset($_POST['senha'])){
 				header('Location: inicio.php');
 			} else {
 
-			echo "Falha na tentativa de Login. Username ou senha incorretos!";
+				echo "Falha na tentativa de Login. Username ou senha incorretos!";
 		}
 	}
 }
