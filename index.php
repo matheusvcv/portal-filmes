@@ -53,6 +53,10 @@ if(isset($_POST['user']) || isset($_POST['senha'])){
 	<title>Login</title>
 </head>
 <body>
+	<div id="faixa">
+		<img src="img/cosvib.png">
+		<h1>Login MyFilmes</h1>
+	</div>
 	<div id="container">
 		<form method="POST" action="">
 			<p>
