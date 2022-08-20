@@ -5,7 +5,7 @@ require "src/conexao.php";
 require "src/desejo.php";
 
 $filmes = New Desejo($conexao);
-$desejos = $filmes->exibeFilmesDesejo();
+$desejos = $filmes->exibeFilmesDesejo($_SESSION['id']);
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ $desejos = $filmes->exibeFilmesDesejo();
 		<p><img src="<?php echo $desejo['imagem']; ?>"></p>
 		<p><strong>Título: </strong><?php echo $desejo['titulo'] ?></p>
 		<p><strong>Popularidade: </strong><?php echo $desejo['popularidade']; ?></p>
-		<p><button>Remover</button></p>
+		<p><a href="deletar_desejos.php?id=<?php echo $desejo['id']; ?>"><button>Remover</button></a></p>
 
 		<?php endforeach; ?>
 

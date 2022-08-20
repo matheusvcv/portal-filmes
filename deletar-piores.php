@@ -41,8 +41,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<?php endforeach; ?>
 
 		<form method="POST" action="">
-			<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
-			<input type="hidden" name="id_usuario" value="<?php echo $_SESSION['id']; ?>">
 			<input type="submit" value="Deletar">	
 		</form>
 
