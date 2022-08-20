@@ -2,9 +2,9 @@
 
 require "protect.php";
 require "src/conexao.php";
-require "src/filme.php";
+require "src/piores.php";
 
-$filme = New Filme($conexao);
+$filme = New Piores($conexao);
 $mostrar = $filme->exibeFilmeIndPior($_GET['id']);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -2,9 +2,9 @@
 
 require "protect.php";
 require "src/conexao.php";
-require "src/filme.php";
+require "src/favoritos.php";
 
-$exibeFav = New Filme($conexao);
+$exibeFav = New Favoritos($conexao);
 $favoritos = $exibeFav->exibeFilmesFav($_SESSION['id']);
 
 

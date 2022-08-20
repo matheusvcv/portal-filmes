@@ -2,9 +2,9 @@
 
 require "protect.php";
 require "src/conexao.php";
-require "src/filme.php";
+require "src/piores.php";
 
-$filmes = New Filme($conexao);
+$filmes = New Piores($conexao);
 $piores = $filmes-> exibeFilmesPiores($_SESSION['id']);
 
 ?>

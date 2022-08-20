@@ -2,7 +2,9 @@
 
 require 'protect.php';
 require "src/conexao.php";
-require "src/filme.php";
+require "src/favoritos.php";
+require "src/piores.php";
+require "src/desejo.php";
 
 
  $_SESSION['imagem'] = $_POST['imagem'];
@@ -26,7 +28,7 @@ require "src/filme.php";
     <p><strong>Popularidade: </strong><?php echo $_SESSION['popularidade']; ?></p>
 
     <p>
-        <form method="POST" action="adicionar.php">
+        <form method="POST" action="adicionar_favoritos.php">
 
             <strong>Lista de favoritos</strong>
 
@@ -40,7 +42,7 @@ require "src/filme.php";
     </p>
 
     <p>
-        <form method="POST" action="piores.php">
+        <form method="POST" action="adicionar_piores.php">
 
             <strong>Lista dos Piores filmes:</strong>
 
@@ -49,11 +51,23 @@ require "src/filme.php";
             <input type="hidden" name="popularidade" value="<?php echo $_SESSION['popularidade']; ?>">
 
             <input type="submit" value="Adicionar Piores Filmes">
+
         </form>  
     </p>
 
-    <form method="POST" action="">
-    </form>  
+    <p>
+    <form method="POST" action="adicionar_lista_desejo.php">
+        
+        <strong>Lista de Desejo: </strong>
+
+        <input type="hidden" name="imagem" value="<?php echo $_SESSION['imagem']; ?>">
+        <input type="hidden" name="titulo" value="<?php echo $_SESSION['titulo']; ?>">
+        <input type="hidden" name="popularidade" value="<?php echo $_SESSION['popularidade']; ?>">
+
+        <input type="submit" value="Adicionar Lista de Desejos">
+
+    </form> 
+    </p> 
 
 </body>
 </html>

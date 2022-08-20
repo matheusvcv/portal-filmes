@@ -2,10 +2,10 @@
 
 require "protect.php";
 require "src/conexao.php";
-require "src/filme.php";
+require "src/favoritos.php";
 
-$filme = New Filme($conexao);
-$mostrar = $filme->exibeFilmeInd($_GET['id']);
+$filme = New Favoritos($conexao);
+$mostrar = $filme->exibeFilmeFavInd($_GET['id']);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
