@@ -21,6 +21,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/cosvi.png">
 	<title>Deletar</title>
 </head>
 <body>

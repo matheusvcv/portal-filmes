@@ -49,26 +49,34 @@ if(isset($_POST['user']) || isset($_POST['senha'])){
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/cosvi.png">
 	<title>Login</title>
 </head>
 <body>
+	<div id="faixa1"></div>
 	<div id="faixa">
-		<img src="img/cosvib.png">
-		<h1>Login MyFilmes</h1>
+		<h1>Login MyCheckMovieList</h1>
 	</div>
+	<div id="faixa1"></div>
 	<div id="container">
 		<form method="POST" action="">
 			<p>
-				Digite seu Username: <input type="text" name="user" placeholder="Nome de Usuário">
+				<strong>Digite seu Username:</strong><br>
+				<br><input type="text" name="user" placeholder="Nome de Usuário">
 			</p>
 			<p>
-				Digite sua Senha: <input type="password" name="senha" placeholder="Senha">
+				<strong>Digite sua Senha: </strong><br>
+				<br><input type="password" name="senha" placeholder="Senha">
 			</p>
 			<p>
 				<input type="submit" value="Entrar">
 			</p>
 		</form>	
+	</div>
+	<div id="faixa1"></div>
+	<div id="logo">
+		<img src="img/cosvib.png">
 	</div>
 </body>
 </html>

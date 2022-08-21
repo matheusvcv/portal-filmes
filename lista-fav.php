@@ -14,25 +14,32 @@ $favoritos = $exibeFav->exibeFilmesFav($_SESSION['id']);
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="img/cosvi.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Favoritos</title>
 </head>
 <body>
-	<a href="index.php">Sair</a>
-	<div id="container">
-		<p>
+	<div id="sair">
+		<button><a href="index.php">Sair</a></button>
+	</div>
+		<div id="faixa1"></div>
+		<div id="faixa">
 			<h1>Lista de filmes favoritos</h1>
-		</p>
+		</div>
+		<div id="faixa1"></div>
+		<div id="container">
 		<p>
 			Lista de filmes preferidos de <?php echo $_SESSION['nome']; ?>!
 		</p>
 			<?php foreach($favoritos as $favorito): ?>
+		<br><div id="bloco">
 		<p>
+			<p><strong><?php echo $favorito['titulo']; ?></strong></p>
 			<img src="<?php echo $favorito['imagem']; ?>">
-			<p><?php echo $favorito['titulo']; ?></p>
-			<p><?php echo $favorito['popularidade']; ?></p>
+			<p><strong>Nota: <?php echo $favorito['popularidade']; ?></strong></p>
 			<p><a href="deletar.php?id=<?php echo $favorito['id']; ?>"><button>Remover</button></a><p>
 		</p>
+		</div><br>
 			<?php endforeach; ?>
 		<br><a href="inicio.php"><button>Voltar</button></a>
 	</div>
