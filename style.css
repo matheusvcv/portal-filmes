@@ -17,6 +17,7 @@ a{
 	padding: 40px 40px;
 	font-family: Verdana, Helvetica, Arial;
 	border: solid 1px black;
+	text-align: ;
 }
 
 #faixa{
@@ -53,7 +54,7 @@ a{
 	border: solid black 1px;
 	height: 530px;
 	width: 420px;
-	padding: 20px 70px;
+	padding: 20px 100px;
 	flex-direction: column;
 	padding-bottom:30%;
 	margin: 0 auto;

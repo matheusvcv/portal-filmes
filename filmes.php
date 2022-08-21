@@ -23,7 +23,7 @@ require "protect.php";
 		</div>
 	<div id="faixa1">
 	</div>
-	<div id="container" align="center">
+	<div id="container">
 		<form action="" method="POST">
 			<p>
 				<strong>Nome do filme:</strong> <input type="text" name="titulo">
@@ -60,13 +60,14 @@ require "protect.php";
 
 						<form method="POST" action="listas.php">
 							<div id="bloco">
-								<img src="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>"><br>
-
-								<input type="hidden" name="imagem" value="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>">
 							
-								Título: <strong><?php echo $resultado->title; ?></strong><br>
+								<strong><?php echo $resultado->title; ?></strong><br>
 
 								<input type="hidden" name="titulo" value="<?php echo $resultado->title; ?>">
+
+								<br><img src="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>"><br>
+
+								<input type="hidden" name="imagem" value="https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $resultado->poster_path; ?>">
 							
 								Pupularidade: <strong><?php echo $resultado->popularity; ?></strong><br>
 
