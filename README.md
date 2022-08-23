@@ -4,5 +4,5 @@
 
 <p align="justify">Para desenvolver o projeto, foi necessário a utilização de PHP orientado a objeto, e integração com banco de dados MySql. Além disso, foi necessário o consumo de uma API externa, a manipulação de objetos Json e a utilização de sessões.</p>
 <h1 align="center">
-  
+  <img src=".img/procurar.gif">
 </h1>
